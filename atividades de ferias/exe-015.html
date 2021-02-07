@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+
+        body {
+            font-size: 13 px;
+            line-height: 1.8;
+            color: #222222;
+            font-weight: 400;
+            background: #282828;
+            padding: 0;
+        }
+
+        img {
+            max-width: 50%;
+        }
+
+        display-flex,
+        .container,
+        .form-row,
+        .form-radio {
+            display: flex;
+        }
+
+        input:focus,
+        select:focus textarea:focus {
+            outline: nome;
+            box-shadow: nome !important;
+        }
+
+        .container {
+            width: 900px;
+            background: #ffffff;
+            margin: 0 auto;
+        }
+
+        .form-radio input {
+            width: auto;
+            display: inline-block;
+        }
+
+        .radio-label {
+            padding-right: 72px;
+        }
+
+        .form-radio-item {
+            position: relative;
+            margin-right: 45px;
+        }
+
+        .form-radio-item label {
+            font-weight: 500;
+            font-size: 13px;
+            padding-left: 25px;
+            cursor: pointer;
+        }
+
+        .check {
+            display: inline-block;
+            position: absolute;
+            border: 1px solid #ebebeb;
+            border-radius: 50px;
+            height: 13px;
+            width: 13px;
+            top: 4px;
+            left: 0px;
+            z-index: 5;
+            transition: border .25s linear;
+        }
+
+        .check:before {
+            position: absolute;
+            display: block;
+            content: '';
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            top: 2px;
+            left: 2px;
+            margin: auto;
+            transition: background 0.25s linear;
+        }
+
+        input[type=radio] {
+            position: absolute;
+            visibility: hidden;
+        }
+
+        input[type=radio]:checked~.check {
+            border: 1px solid #ff6801;
+        }
+
+        input[type=radio]:checked~.check::before {
+            background: #ff6801
+        }
+
+        select {
+            cursor: pointer;
+        }
+
+        .submit {
+            width: 140px;
+            padding: 15px;
+            border: none;
+            cursor: pointer;
+            background: #ff6801;
+            color: #fff;
+        }
+        #submit:hover {
+            background-color: #cd5300;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="conteiner">
+        <img src="imagems/img/estudantes.jpg" alt="">
+        <div>
+            <form method="POST" class="formularios">
+                <div class="form-group">
+                    <label for="nome">nome:</label>
+                    <input type="text" id="nome" required>
+                </div>
+                <div class="form-radio">
+                    <label for="tipo" class="radio-label">tipo:</label>
+                    <div class="form-radio-item">
+                        <input type="radio" id="matricula" checked name="tipo">
+                        <label for="matricula">matriculas</label>
+                        <span class="check"><span>
+                    </div>
+                    <div class="form-radio-item">
+                        <input type="radio" id="trasferencia" name="tipo">
+                        <label for="trasferencia">trasferencia</label>
+                        <span class="check"></span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="estado">Estado:</label>
+                        <div class="form-select">
+                            <select id="estado">
+                                <option value=""></option>
+                                <option value="sp">são paulo</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="cidade">cidade:</label>
+                        <div class="form-select">
+                            <select id="cidade">
+                                <option value=""></option>
+                                <option value="americana">americana</option>
+                                <option value="limeira">limeira</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="birth_date">data de nacimento:</label>
+                        <input type="date" id="data -nacimenro">
+                    </div>
+                    <div class="form-group">
+                        <label for="couse">curso:</label>
+                        <div class="form-select">
+                            <select id="course">
+                                <option value=""></option>
+                                <option value="ti">tecnico em informatica</option>
+                                <option value="jogos">programador de jogos</option>
+                                <option value="jogos">tecnico em informatica para internet</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">email:</label>
+                        <input type="email" id="email">
+                    </div>
+                    <button type="submit" value="submit form" class="submit" id="submit">cadastro</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</body>
+
+</html>

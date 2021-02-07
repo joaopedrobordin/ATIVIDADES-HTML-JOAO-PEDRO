@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+margin:0 ;
+padding: 0;
+font-family: sans-serif;
+font-size: 1em;
+}
+body{
+padding: 2em 2em 0 2em;
+}
+h1{
+font-size: 2rem ;
+}
+fieldset{
+border: 0 ;
+}
+.grupo:before , .grupo:after{
+    content: ;
+    display: table;
+}
+
+.grupo:after {
+    clear: both;}
+.campo{
+    margin-bottom: 1em;
+}
+.campo label {
+    margin-bottom: 0,2em;
+    color: #666;
+    display: block;
+}
+fieldset.grupo .campo {
+    float: left;
+    margin-right: 1em;
+
+}
+.campo input [type="text"]
+.campo input [type="email"]
+.campo input [type="url"]
+.campo input [type="tel"]
+.campo select, 
+.campo textarea{
+    padding: ;
+    border: 1px solid #cccccc;
+    box-shadow:2px 2px 2px rgba(0,0,0,0,2);
+    display :block;
+}
+.campo select option {
+    padding-right: 1em;
+}
+.campo input :focus,.campo select :focus, .campo textarea:focus{
+    background: #ffc;
+}
+.campo label.checkbox {
+color: black;
+display: inline-block;
+margin-right: 1em;
+}
+.botao{
+font-size: 1.5em;
+background: orange;
+border: 0;
+margin-bottom:1em ;
+color: white;
+padding:0.2em 0.2em;
+box-shadow: 2px 2px 2px rgba(0,0,0,0,2);
+text-shadow: 1px 1px 1px ;
+
+}
+.botao:hover{
+    background: orange;
+    box-shadow: inset 2px 2px 2px black;
+    text-shadow: none;
+}
+.botao. select label.checkbox {
+    cursor: pointer;
+}
+
+</style>
+<body>
+    <h1>
+        formulario de suporte
+    </h1>
+    <form actiom="#" method="POST">
+        <fieldset class="grupo">
+            <div class="campo">
+                <label for="nome">Nome</label>
+                <input type="text" id="snome" name="snome" style="width:20em">
+            </div>
+            <div class="campo">
+                <label for="snome">sobrenome</label>
+                <input type="text" id="snome" name="snome" style="width: 20em">
+            </div>
+        </fieldset>
+
+        <div class="campo">
+            <label for="email">E-Mail</label>
+            <input type="text" id="email" name="email" style="width: 41em">
+        </div>
+        <div class="campo">
+            <label for="telefone">telefone</label>
+            <input type="text" id="telefone" name="telefone" style="width: 41em">
+        </div>
+        <fieldset class="grupo">
+            <div class="campo">
+                <label for="cidade">cidade</label>
+                <input type="text" id="cidade" name="cidade" style="width: 20em">
+            </div>
+            <div class="campo">
+                <label for="estado">estado</label>
+                <select name="estado" id="estado">
+                    <option>--</option>
+                    <option value="PR">PR</option>
+                </select>
+            </div>
+        </fieldset>
+        <div class="campo">
+            <label for="mensagem">mensagem</label>
+            <textarea rows="6" style="width: 41em" id="mensagem" name="mensagem"></textarea>
+        </div>
+        <div class="campo">
+            <label>NewsLetter</label>
+            <label class="checkbox">
+                <input type="checkbox" nome="NewsLetter" value="1">gostaria de receber a NewsLetter da empresa
+            </label>
+        </div>
+
+        <button class="botao submit" type="submit" name="submit">emviar</button>
+
+        </fieldset>
+    </form>
+    
+    
+</body>
+</html>
